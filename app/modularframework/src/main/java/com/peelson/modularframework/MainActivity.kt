@@ -1,14 +1,7 @@
-package com.peelson.papp
+package com.peelson.modularframework
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
-/**
- * 主要的工程入口
- *
- * @author peelson
- *
- */
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

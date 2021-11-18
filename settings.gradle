@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "PApp"
 include ':app'
+include ':app:modularcompose'
+include ':app:modularframework'
