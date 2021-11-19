@@ -19,14 +19,29 @@ class MainViewModel : ViewModel() {
             Pet.xiu,
             Pet.hu,
             Pet.nemo,
+            Pet.sandy,
+            Pet.co,
+            Pet.xiu,
+            Pet.hu,
+            Pet.nemo,
+            Pet.sandy,
+            Pet.co,
+            Pet.xiu,
+            Pet.hu,
+            Pet.nemo,
+            Pet.sandy,
+            Pet.co,
+            Pet.xiu,
+            Pet.hu,
+            Pet.nemo,
             Pet.sandy
         )
     )
 
     fun noun(pet: Pet): String =
         if (pet.speech.isNullOrEmpty()) {
-            "不会叫"
+            "${pet.name} 可不会叫"
         } else {
-            pet.speech
+            "${pet.speech} ~"
         }
 }

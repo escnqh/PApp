@@ -1,0 +1,28 @@
+// 项目中的版本信息
+
+ext {
+    MIN_SDK_VERSION = 21
+    COMPILE_SDK_VERSION = 30
+    TARGET_SDK_VERSION = COMPILE_SDK_VERSION
+    BUILD_TOOLS_VERSION = "30.0.3"
+    // Project
+    PROJECT_NAME = "PApp"
+    // Version
+    VERSION_NAME = "0.0.1.0"
+    VERSION_CODE = 0010
+    VERSION_NAME_OFFSET_BETA = "-0.0.0.8"
+    VERSION_CODE_OFFSET_BETA = -8
+    VERSION_NAME_OFFSET_GOOGLE = "-0.0.0.5"
+    VERSION_CODE_OFFSET_GOOGLE = -5
+}
+
+ext.version = [
+        kotlinVersion : "1.5.31",
+        composeVersion: "1.0.5"
+]
+
+ext.build = [
+        gradle      : "com.android.tools.build:gradle:7.0.0",
+        kotlinPlugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:${ext.version.kotlinVersion}",
+]
+

@@ -3,15 +3,17 @@ plugins {
     id 'kotlin-android'
 }
 
+apply from: '../../versions.gradle'
+
 android {
-    compileSdk 31
+    compileSdk COMPILE_SDK_VERSION
 
     defaultConfig {
         applicationId "com.peelson.modularcompose"
-        minSdk 21
-        targetSdk 30
-        versionCode 1
-        versionName "1.0"
+        minSdk MIN_SDK_VERSION
+        targetSdk TARGET_SDK_VERSION
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -50,25 +52,25 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Compose
-    implementation("androidx.compose.ui:ui:1.0.1")
+    implementation("androidx.compose.ui:ui:${rootProject.ext.version.composeVersion}")
     // Tooling support (Previews, etc.)
-    implementation("androidx.compose.ui:ui-tooling:1.0.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.0.1")
+    implementation("androidx.compose.ui:ui-tooling:${rootProject.ext.version.composeVersion}")
+    implementation("androidx.compose.ui:ui-tooling-preview:${rootProject.ext.version.composeVersion}")
     // Compose Activity
     implementation("androidx.activity:activity-compose:1.4.0")
     // Lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
-    implementation("androidx.compose.foundation:foundation:1.0.1")
+    implementation("androidx.compose.foundation:foundation:${rootProject.ext.version.composeVersion}")
     // Material Design
-    implementation("androidx.compose.material:material:1.0.1")
+    implementation("androidx.compose.material:material:${rootProject.ext.version.composeVersion}")
     // Material design icons
-    implementation("androidx.compose.material:material-icons-core:1.0.1")
-    implementation("androidx.compose.material:material-icons-extended:1.0.1")
+    implementation("androidx.compose.material:material-icons-core:${rootProject.ext.version.composeVersion}")
+    implementation("androidx.compose.material:material-icons-extended:${rootProject.ext.version.composeVersion}")
     // Integration with observables
-    implementation("androidx.compose.runtime:runtime-livedata:1.0.1")
-    implementation("androidx.compose.runtime:runtime-rxjava2:1.0.1")
+    implementation("androidx.compose.runtime:runtime-livedata:${rootProject.ext.version.composeVersion}")
+    implementation("androidx.compose.runtime:runtime-rxjava2:${rootProject.ext.version.composeVersion}")
     // UI Tests
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${rootProject.ext.version.composeVersion}")
 }
